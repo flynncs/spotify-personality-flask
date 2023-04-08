@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Personality Analysis</title>
+</head>
+<body>
+    <h1>Spotify Personality Analysis</h1>
+    {% if personality_analysis %}
+        <p>{{ personality_analysis }}</p>
+    {% else %}
+        <p>Please log in with Spotify to see your personality analysis.</p>
+        <a href="{{ url_for('login') }}">Log in with Spotify</a>
+    {% endif %}
+</body>
+</html>
